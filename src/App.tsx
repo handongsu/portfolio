@@ -1,4 +1,5 @@
-import { ThemeContext, ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
+import { ThemeContext } from "./context/ThemeContext";
 import Layout from "./components/Layout";
 import GlobalStyle from "./Styles/GlobalStyles";
 import { theme } from "./Styles/theme";

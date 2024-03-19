@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
 		outline:none;
 		border:none;
 		color: ${({ theme }) => theme.textColor};
-		background-color:transparent;
+		background-color: transparent;
 	}
 `;
 

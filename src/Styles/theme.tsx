@@ -1,6 +1,7 @@
-// Media query breakpoints
+const calcRem = (px: number): string => `${px / 16}rem`;
+
 const size = {
-  mobile: "320px",
+  mobile: "390px",
   TabletS: "768px",
   TabletM: "1024px",
   Desktop: "1200px",
@@ -14,9 +15,9 @@ const viewSize = {
 };
 
 const fontSize = {
-  fontS: "10px",
-  fontM: "20px",
-  fontL: "30px",
+  fontS: calcRem(12),
+  fontM: calcRem(20),
+  fontL: calcRem(30),
   fontXL: "40px",
   fontXXL: "50px",
 };
@@ -37,11 +38,11 @@ const marginSize = {
   marginXXL: "50px",
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 const ColorTools = {
   pointColor: "#f54404",
 };
 
-// color switch
 const lightTheme = {
   bgColor: "#F1EFED",
   textColor: "black",
