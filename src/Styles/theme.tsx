@@ -2,15 +2,13 @@ const calcRem = (px: number): string => `${px / 16}rem`;
 
 const size = {
   mobile: "390px",
-  TabletS: "768px",
-  TabletM: "1024px",
-  Desktop: "1200px",
+  Tablet: "768px",
+  Desktop: "1024px",
 };
 
 const viewSize = {
-  mobileSmall: `(max-width: ${size.mobile})`,
-  tabletSmall: `(min-width: ${size.TabletS})`,
-  tabletMedium: `(min-width: ${size.TabletM})`,
+  mobile: `(max-width: ${size.mobile})`,
+  tablet: `(min-width: ${size.Tablet})`,
   deskTop: `(min-width: ${size.Desktop})`,
 };
 

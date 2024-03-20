@@ -8,10 +8,10 @@ function Layout() {
   return (
     <>
       <Header />
-      <About />
+      {/* <About />
       <Projects />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
