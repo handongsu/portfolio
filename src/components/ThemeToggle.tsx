@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import styled from "styled-components";
-// import { withStyles } from "@material-ui/core/styles";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Switch, { SwitchProps } from "@material-ui/core/Switch";
+import { FormControlLabel, Switch, SwitchProps } from "@mui/material";
 import { ThemeContext } from "../context/ThemeContext";
 
 export interface ThemeModeProps {

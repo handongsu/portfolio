@@ -8,6 +8,7 @@ const HeaderBox = styled.header`
   align-items: center;
   height: 60px;
   padding: 0 20px;
+  padding-top: 15px;
   position: fixed;
   top: 0;
   width: 100%;

@@ -3,68 +3,104 @@ import { ThemeContext } from "../context/ThemeContext";
 import * as ioIcons from "react-icons/io5";
 import { useContext, useState, useEffect } from "react";
 
-interface SlideProps {
+interface NavProps {
   open?: boolean;
   mode: string;
 }
 
-const OpenIcon = styled.button<SlideProps>`
-  position: relative;
-  top: 2px;
-  font-size: ${({ theme }) => theme.fontL};
-  color: ${(props) => props.mode};
+const Icon = styled.button`
+  font-size: ${({ theme }) => theme.fontXL};
   cursor: pointer;
-`;
+  transition: transform 0.5s;
 
-const slideIn = keyframes`
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
+  &:hover {
+    transform: scale(1.3);
   }
 `;
 
-const slideOut = keyframes`
-  from {
-    transform: translateX(0);
+const OpenIcon = styled(Icon)<NavProps>`
+  visibility: ${(props) => (props.open ? "hidden" : "visible")};
+`;
+
+const puffIn = keyframes`
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(2px);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
   }
 `;
 
-const Slide = styled.div<SlideProps>`
+const puffOut = keyframes`
+    0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(2px);
+  }
+`;
+
+const Slide = styled.div<NavProps>`
   position: fixed;
   left: 0;
   top: 0;
-  width: 20%;
+  width: 100%;
   height: 100vh;
-  opacity: 0.3;
   background-color: gray;
-  color: ${(props) => props.mode};
   display: flex;
   z-index: 15;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  animation: ${(props) => (props.open ? slideIn : slideOut)} 0.5s forwards;
+  animation: ${(props) => (props.open ? puffIn : puffOut)} 0.7s forwards;
 `;
 
-const CloseIcon = styled.button`
-  font-size: ${({ theme }) => theme.fontL};
-  position: relative;
-  cursor: pointer;
-`;
+const Li = styled.li`
+  padding: ${({ theme }) => theme.paddingS};
+  transition: transform 0.5s;
 
+  &:hover {
+    transform: scale(1.3);
+  }
+
+  //li 요소가 바로 옆에 붙어있을 때
+  & + & {
+    margin-top: ${({ theme }) => theme.marginL};
+  }
+`;
+const Menu = styled.a`
+  font-size: ${({ theme }) => theme.fontXL};
+  font-weight: 700;
+`;
 function MobileNav() {
-  const [open, setOpen] = useState(false);
-  const [render, setRender] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
+  const [render, setRender] = useState<boolean>(false);
   const { mode } = useContext(ThemeContext);
 
+  const menuDetails = [
+    { text: "Home", path: "/" },
+    { text: "About", path: "#about" },
+    { text: "Project", path: "#project" },
+    { text: "Resume", path: "#resume" },
+  ];
+
   useEffect(() => {
-    if (open) setRender(true);
+    if (open) {
+      setRender(true);
+    }
   }, [open]);
 
   const menuClick = () => {
@@ -76,7 +112,11 @@ function MobileNav() {
   return (
     <>
       <OpenIcon onClick={menuClick} mode={mode.textColor}>
-        {open ? null : <ioIcons.IoMenu />}
+        {open ? (
+          <div style={{ width: "40px", height: "24px" }}></div>
+        ) : (
+          <ioIcons.IoMenu />
+        )}
       </OpenIcon>
       {render && (
         <Slide
@@ -84,15 +124,16 @@ function MobileNav() {
           mode={mode.textColor}
           onAnimationEnd={handleAnimation}
         >
-          <CloseIcon onClick={menuClick}>
+          <Icon onClick={menuClick}>
             <ioIcons.IoCloseSharp />
-          </CloseIcon>
+          </Icon>
           <div>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Project</li>
-              <li>Resume</li>
+              {menuDetails.map(({ text, path }) => (
+                <Li>
+                  <Menu href={path}>{text}</Menu>
+                </Li>
+              ))}
             </ul>
           </div>
         </Slide>

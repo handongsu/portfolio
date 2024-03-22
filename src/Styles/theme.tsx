@@ -16,24 +16,24 @@ const fontSize = {
   fontS: calcRem(12),
   fontM: calcRem(20),
   fontL: calcRem(30),
-  fontXL: "40px",
-  fontXXL: "50px",
+  fontXL: calcRem(40),
+  fontXXL: calcRem(50),
 };
 
 const paddingSize = {
-  paddingS: "10px",
-  paddingM: "20px",
-  paddingL: "30px",
-  paddingXL: "40px",
-  paddingXXL: "50px",
+  paddingS: calcRem(10),
+  paddingM: calcRem(20),
+  paddingL: calcRem(30),
+  paddingXL: calcRem(40),
+  paddingXXL: calcRem(50),
 };
 
 const marginSize = {
-  marginS: "10px",
-  marginM: "20px",
-  marginL: "30px",
-  marginXL: "40px",
-  marginXXL: "50px",
+  marginS: calcRem(10),
+  marginM: calcRem(20),
+  marginL: calcRem(30),
+  marginXL: calcRem(40),
+  marginXXL: calcRem(50),
 };
 
 // eslint-disable-next-line react-refresh/only-export-components

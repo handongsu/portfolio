@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import "./fonts/PressStart2P-Regular.ttf";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -16,7 +17,16 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
     font-style: normal;
 }
-
+	@font-face {
+		font-family: 'SingleDay';
+		src: url('./fonts/PressStart2P-Regular.ttf') format('truetype');
+	}
+@font-face {
+     font-family: 'DungGeunMo';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
 	* {
 		padding: 0;
 		margin: 0;
@@ -30,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
     box-sizing: border-box;
-		font-family: 'SUITE-Regular','Noto Sans KR', sans-serif;
+		font-family: 'SUITE-Regular';
 		background: ${({ theme }) => theme.bgColor};
 		color: ${({ theme }) => theme.textColor};
 		transition: all 0.25s linear;
