@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 const Container = styled.div`
   width: 70vw;
-  margin: 15vw auto;
+  margin: 25vw auto 10vw auto;
   display: flex;
   flex-direction: column;
   line-height: 100px;

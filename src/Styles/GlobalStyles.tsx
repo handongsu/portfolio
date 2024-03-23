@@ -1,26 +1,25 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import "./fonts/PressStart2P-Regular.ttf";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
-	@font-face {
-    font-family: 'SUITE-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-	@font-face {
-    font-family: 'SUITE-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Bold.woff2') format('woff2');
+@font-face {
+    font-family: 'SejonghospitalBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
-	@font-face {
-		font-family: 'SingleDay';
-		src: url('./fonts/PressStart2P-Regular.ttf') format('truetype');
-	}
+@font-face {
+    font-family: 'SejonghospitalLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalLight.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+font-family:'DNFBitBitv2';
+font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
+
 @font-face {
      font-family: 'DungGeunMo';
      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -40,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
     box-sizing: border-box;
-		font-family: 'SUITE-Regular';
+		font-family: 'SejonghospitalBold';
 		background: ${({ theme }) => theme.bgColor};
 		color: ${({ theme }) => theme.textColor};
 		transition: all 0.25s linear;
