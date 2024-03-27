@@ -37,7 +37,7 @@ function Header() {
     <HeaderBox>
       <MobileNav />
       <Title>
-        <a href="/">DS.</a>
+        <a href="/">DS Portfolio</a>
       </Title>
       <SectionTitle>
         <ThemeToggle />
