@@ -6,6 +6,7 @@ const ProjectBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 ${({ theme }) => theme.marginXL};
   font-family: "SejonghospitalLight";
 `;
 
@@ -51,7 +52,7 @@ const Link = styled.div`
 const SS = styled.span`
   background-color: grey;
   font-size: 16px;
-  padding: 1px 3px;
+  padding: 5px;
   border-radius: 10px;
 `;
 
@@ -81,11 +82,25 @@ function ProjectComp() {
             <a href="https://github.com/handongsu/portfolio">
               https://github.com/handongsu/portfolio
             </a>
+            <br />
+            <br />
+            <SS>레포지토리 주소</SS>
+            <br />
+            <br />
+            <a href="https://github.com/handongsu/portfolio">
+              https://github.com/handongsu/portfolio
+            </a>
           </div>
         </Link>
       </div>
       <DescBox>
-        <h3>프로젝트 소개</h3>안녕하세요
+        <h3>프로젝트 소개</h3>
+        프론트엔드 취업을 위한 프로젝트입니다. 노션을 이용한 포트폴리오
+        페이지에서 링크 트리의 불편함을 느껴, 한 페이지에서 편리한 정보 조회가
+        가능한 포트폴리오 웹을 개발했습니다. 편리하고 효율적인 정보 탐색을
+        제공하기 위해 클릭을 이용한 스크롤 이동을 주요 기능으로 개발하였습니다.
+        <h3>기술 스택</h3>
+        React.js, TypeScript, CSS, Context-api, Styled-Component, MUI
       </DescBox>
     </ProjectBox>
   );
