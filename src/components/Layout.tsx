@@ -1,9 +1,9 @@
-import Header from "./Header";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import Footer from "./Footer";
-import Home from "./Home";
+import Header from "../Sections/Header";
+import About from "../Sections/About";
+import Projects from "../Sections/Projects";
+import Contact from "../Sections/Contact";
+import Footer from "../Sections/Footer";
+import Home from "../Sections/Home";
 
 function Layout() {
   return (

@@ -1,6 +1,6 @@
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "../components/ThemeToggle";
 import styled from "styled-components";
-import MobileNav from "./MobileNav";
+import MobileNav from "../components/MobileNav";
 
 const HeaderBox = styled.header`
   display: flex;

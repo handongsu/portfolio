@@ -1,13 +1,20 @@
 import styled from "styled-components";
 import image from "../assets/react-query.gif";
+import { InforamtionProps } from "../constants/project";
 
-const ProjectBox = styled.div`
+const ProjectBox = styled.article`
   min-height: 70vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 ${({ theme }) => theme.marginXL};
   font-family: "SejonghospitalLight";
+  margin-bottom: ${({ theme }) => theme.marginXXL};
+
+  @media ${({ theme }) => theme.deskTop} {
+    flex-direction: row;
+  }
 `;
 
 const Image = styled.div`
@@ -58,15 +65,26 @@ const SS = styled.span`
 
 const DescBox = styled.div`
   line-height: 2;
-  padding: ${(props) => props.theme.paddingS};
+  padding: ${(props) => props.theme.paddingM};
 
   h3 {
     font-family: "DNFBitBitv2";
     line-height: 4;
+    display: inline;
+    box-shadow: inset 0 -10px 0 #275efe;
+  }
+  width: 300px;
+
+  @media ${(props) => props.theme.tabletMedium} {
+    width: 400px;
+  }
+  @media ${(props) => props.theme.deskTop} {
+    width: 500px;
+    padding-top: 0;
   }
 `;
 
-function ProjectComp() {
+function ProjectComp({ title, link, content, repo, skills }: InforamtionProps) {
   return (
     <ProjectBox>
       <div>
@@ -74,33 +92,29 @@ function ProjectComp() {
           <img src={image} />
         </Image>
         <Link>
-          <Title>Catlendar</Title>
+          <Title>{title}</Title>
           <div>
             <SS>배포 링크</SS>
             <br />
             <br />
-            <a href="https://github.com/handongsu/portfolio">
-              https://github.com/handongsu/portfolio
-            </a>
+            <a href="https://github.com/handongsu/portfolio">{link}</a>
             <br />
             <br />
             <SS>레포지토리 주소</SS>
             <br />
             <br />
-            <a href="https://github.com/handongsu/portfolio">
-              https://github.com/handongsu/portfolio
-            </a>
+            <a href="https://github.com/handongsu/portfolio">{repo}</a>
           </div>
         </Link>
       </div>
       <DescBox>
         <h3>프로젝트 소개</h3>
-        프론트엔드 취업을 위한 프로젝트입니다. 노션을 이용한 포트폴리오
-        페이지에서 링크 트리의 불편함을 느껴, 한 페이지에서 편리한 정보 조회가
-        가능한 포트폴리오 웹을 개발했습니다. 편리하고 효율적인 정보 탐색을
-        제공하기 위해 클릭을 이용한 스크롤 이동을 주요 기능으로 개발하였습니다.
+        <br />
+        {content}
+        <br />
         <h3>기술 스택</h3>
-        React.js, TypeScript, CSS, Context-api, Styled-Component, MUI
+        <br />
+        {skills}
       </DescBox>
     </ProjectBox>
   );
