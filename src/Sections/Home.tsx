@@ -204,7 +204,7 @@ const Group = styled.div`
 
 function Home() {
   return (
-    <Container>
+    <Container id="home">
       <Group>
         <H1First>Hello</H1First>
         <H1Second>Hello</H1Second>

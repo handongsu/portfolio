@@ -107,7 +107,7 @@ const Skills = styled.div`
 `;
 function About() {
   return (
-    <AboutBox>
+    <AboutBox id="about">
       <Title>소개</Title>
       <InfoBox>
         <Image>

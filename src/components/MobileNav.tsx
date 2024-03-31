@@ -131,7 +131,9 @@ function MobileNav() {
             <ul>
               {menuDetails.map(({ text, path }) => (
                 <Li>
-                  <Menu href={path}>{text}</Menu>
+                  <Menu href={path} aria-label={text}>
+                    {text}
+                  </Menu>
                 </Li>
               ))}
             </ul>

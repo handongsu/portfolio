@@ -25,7 +25,7 @@ const Title = styled.h2`
 
 function Projects() {
   return (
-    <ProjectContent>
+    <ProjectContent id="project">
       <Title>프로젝트</Title>
       <ProjectComp
         title={"Portfolio"}
