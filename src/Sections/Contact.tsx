@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { send } from "@emailjs/browser";
 
 const Wrapper = styled.div`
   display: flex;

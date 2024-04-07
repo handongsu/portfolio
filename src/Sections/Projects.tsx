@@ -29,6 +29,7 @@ function Projects() {
       <Title>프로젝트</Title>
       <ProjectComp
         title={"Portfolio"}
+        image={"react-query"}
         link={`https://github.com/handongsu/portfolio`}
         repo={`https://github.com/handongsu/portfolio`}
         content={`프론트엔드 취업을 위한 프로젝트입니다. 노션을 이용한 포트폴리오
@@ -41,6 +42,7 @@ function Projects() {
       />
       <ProjectComp
         title={"Catlendar"}
+        image={"react-query"}
         link={`https://github.com/Catlendar/catlendar-frontend`}
         repo={`https://github.com/Catlendar/catlendar-frontend`}
         content={`캣린더(Catlendar)는 고양이를 테마로 한 투두 리스트 및 일정 관리 앱으로,
@@ -51,6 +53,9 @@ function Projects() {
       />
       <ProjectComp
         title={"FitBuddy"}
+        image={
+          "https://github.com/FRONTENDSCHOOL7/final-21-FitBuddy/assets/139687655/f4a2c6d4-d4f2-4f23-b8c1-224ad7567fe9"
+        }
         link={`https://github.com/FRONTENDSCHOOL7/final-21-FitBuddy`}
         repo={`https://github.com/FRONTENDSCHOOL7/final-21-FitBuddy`}
         content={`'핏버디'는 운동에 대한 열정을 공유하고, 함께 땀 흘리며 건강한 생활을 이어갈 친구들을 만날 수 있는 운동 커뮤니티입니다.

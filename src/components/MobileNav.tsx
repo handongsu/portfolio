@@ -106,6 +106,9 @@ function MobileNav() {
   const menuClick = () => {
     setOpen(!open);
   };
+  const closeClick = () => {
+    setOpen(false);
+  };
   const handleAnimation = () => {
     if (!open) setRender(false);
   };
@@ -130,7 +133,7 @@ function MobileNav() {
           <div>
             <ul>
               {menuDetails.map(({ text, path }) => (
-                <Li>
+                <Li onClick={closeClick}>
                   <Menu href={path} aria-label={text}>
                     {text}
                   </Menu>

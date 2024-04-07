@@ -1,6 +1,13 @@
 import styled from "styled-components";
-import image from "../assets/react-query.gif";
-import { InforamtionProps } from "../constants/project";
+
+export interface InforamtionProps {
+  title: string;
+  link: string;
+  image: string;
+  content: string;
+  repo: string;
+  skills: string[];
+}
 
 const ProjectBox = styled.article`
   min-height: 70vh;
@@ -22,9 +29,10 @@ const Image = styled.div`
 
   img {
     margin: 0 auto;
+    margin-top: 90px;
     display: block;
-    width: 250px;
-    height: 200px;
+    width: 50px;
+    height: 500px;
   }
 
   @media ${(props) => props.theme.tabletMedium} {
@@ -84,12 +92,19 @@ const DescBox = styled.div`
   }
 `;
 
-function ProjectComp({ title, link, content, repo, skills }: InforamtionProps) {
+function ProjectComp({
+  title,
+  image,
+  link,
+  content,
+  repo,
+  skills,
+}: InforamtionProps) {
   return (
     <ProjectBox>
       <div>
         <Image>
-          <img src={image} />
+          <img src={`${image}`} alt={title} />
         </Image>
         <Link>
           <Title>{title}</Title>
