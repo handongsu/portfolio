@@ -2,7 +2,7 @@
 
 ### 배포 링크
 
-👉 [Catlendar 바로가기](https://catlendar.netlify.app/)
+👉 [Portfolio 바로가기](https://catlendar.netlify.app/)
 </br>
 
 </br>
