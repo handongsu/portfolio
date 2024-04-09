@@ -1,4 +1,10 @@
+import { useState } from "react";
 import styled from "styled-components";
+import emailjs from "emailjs-com";
+
+export const userID = import.meta.env.VITE_EMAILJS_USER_ID;
+export const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+export const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 
 const Wrapper = styled.div`
   display: flex;
@@ -41,6 +47,11 @@ const Title = styled.h2`
     margin-bottom: ${({ theme }) => theme.marginXXL};
   }
 `;
+
+const Input = styled.input`
+  padding: ${(props) => props.theme.paddingS};
+`;
+
 const Textarea = styled.textarea`
   border: none;
   resize: vertical;
@@ -67,16 +78,69 @@ const FormButton = styled.button`
 `;
 
 function Contact() {
+  const [formInput, setFormInput] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    const target = e.target as HTMLInputElement | HTMLTextAreaElement;
+    setFormInput({ ...formInput, [target.name]: target.value });
+  };
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs.send(serviceID, templateID, formInput, userID).then(
+      (result) => {
+        console.log(result.text);
+        alert("발송되었습니다.");
+        setFormInput({
+          name: "",
+          email: "",
+          message: "",
+        });
+      },
+      (error) => {
+        console.log(error.text);
+        alert("오류가 발생하였습니다.");
+      }
+    );
+  };
+
   return (
     <Wrapper>
-      <ContactWrapper>
+      <ContactWrapper onSubmit={sendEmail}>
         <Title style={{ color: "black" }}>Contact</Title>
         <label htmlFor="name">Name</label>
-        <input type="text" name="name" required />
+        <Input
+          type="text"
+          name="name"
+          value={formInput.name}
+          onChange={handleChange}
+          required
+        />
         <label htmlFor="email">Mail</label>
-        <input type="text" name="email" required />
+        <Input
+          type="text"
+          name="email"
+          value={formInput.email}
+          onChange={handleChange}
+          required
+        />
         <label htmlFor="message">Message</label>
-        <Textarea typeof="text" name="message" required />
+        <Textarea
+          typeof="text"
+          name="message"
+          value={formInput.message}
+          onChange={handleChange}
+          required
+        />
         <div
           style={{
             display: "flex",

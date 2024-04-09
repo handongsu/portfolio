@@ -29,7 +29,7 @@ function Projects() {
       <Title>프로젝트</Title>
       <ProjectComp
         title={"Portfolio"}
-        image={"react-query"}
+        image={"white.png"}
         link={`https://github.com/handongsu/portfolio`}
         repo={`https://github.com/handongsu/portfolio`}
         content={`프론트엔드 취업을 위한 프로젝트입니다. 노션을 이용한 포트폴리오
