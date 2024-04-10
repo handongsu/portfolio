@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+<h1 align="">Portfolio</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 배포 링크
 
-Currently, two official plugins are available:
+👉 [Portfolio 바로가기](https://catlendar.netlify.app/)
+</br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</br>
+## 1. 서비스 소개
 
-## Expanding the ESLint configuration
+취업을 위한 한동수의 프론트엔드 포트폴리오 입니다.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+</br>
 
-- Configure the top-level `parserOptions` property like this:
+### 개발 기간 (24.03.20 ~ 24.04.10)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## 2. 개발 환경
+
+### 🛠 기술 스택
+
+<div>
+  <img src="https://img.shields.io/badge/typescript-grey?style=for-the-badge&logo=typescript&logoColor=f7df1e" />
+  <img src="https://img.shields.io/badge/React-grey?style=for-the-badge&logo=React&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/styled components-grey?style=for-the-badge&logo=styled-components&logoColor=DB7093"/>
+  <img src="https://img.shields.io/badge/netlify-grey?style=for-the-badge&logo=netlify&logoColor=00C7B7"/>
+</div>
+</br>
+
+기술 스택 상세 정보
+
+```
+  언어: HTML, CSS, TypeScript
+  라이브러리: React.js, Styled-component,Email.js
+  상태관리: Context-api
+  IDE: VScode
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+
+
+
+
