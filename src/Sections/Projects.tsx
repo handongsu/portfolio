@@ -29,7 +29,7 @@ function Projects() {
       <Title>프로젝트</Title>
       <ProjectComp
         title={"Portfolio"}
-        image={"white.png"}
+        image={"portfolio.gif"}
         link={`https://github.com/handongsu/portfolio`}
         repo={`https://github.com/handongsu/portfolio`}
         content={`프론트엔드 취업을 위한 프로젝트입니다. 노션을 이용한 포트폴리오
@@ -37,12 +37,12 @@ function Projects() {
         가능한 포트폴리오 웹을 개발했습니다. 편리하고 효율적인 정보 탐색을
         제공하기 위해 클릭을 이용한 스크롤 이동을 주요 기능으로 개발하였습니다.`}
         skills={[
-          " React.js, TypeScript, CSS, Context-api, Styled-Component, MUI",
+          " React.js, TypeScript, Styled-Component, Context-api, CSS, MUI, Email.js",
         ]}
       />
       <ProjectComp
         title={"Catlendar"}
-        image={"react-query"}
+        image={"catlendar.gif"}
         link={`https://github.com/Catlendar/catlendar-frontend`}
         repo={`https://github.com/Catlendar/catlendar-frontend`}
         content={`캣린더(Catlendar)는 고양이를 테마로 한 투두 리스트 및 일정 관리 앱으로,

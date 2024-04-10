@@ -26,14 +26,14 @@ const ProjectBox = styled.article`
 
 const Image = styled.div`
   margin-bottom: ${(props) => props.theme.marginL};
-  height: 450px;
-  overflow: hidden;
+  height: 300px;
+  /* overflow: hidden; */
 
   img {
     margin: 0 auto;
     margin-top: 90px;
     display: block;
-    height: 500px;
+    height: 300px;
     overflow: hidden;
     border-radius: 5px;
   }
