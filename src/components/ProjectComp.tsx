@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export interface InforamtionProps {
+export interface InformationProps {
   title: string;
   link: string;
   image: string;
@@ -102,7 +102,7 @@ function ProjectComp({
   content,
   repo,
   skills,
-}: InforamtionProps) {
+}: InformationProps) {
   return (
     <ProjectBox>
       <div>
@@ -115,13 +115,13 @@ function ProjectComp({
             <SS>배포 링크</SS>
             <br />
             <br />
-            <a href="https://github.com/handongsu/portfolio">{link}</a>
+            <a href={link}>{link}</a>
             <br />
             <br />
             <SS>레포지토리 주소</SS>
             <br />
             <br />
-            <a href="https://github.com/handongsu/portfolio">{repo}</a>
+            <a href={repo}>{repo}</a>
           </div>
         </Link>
       </div>

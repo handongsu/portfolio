@@ -42,7 +42,7 @@ function Projects() {
       />
       <ProjectComp
         title={"Catlendar"}
-        image={"catlendar.gif"}
+        image={"catlendarGIF.gif"}
         link={`https://catlendar.netlify.app/`}
         repo={`https://github.com/Catlendar/catlendar-frontend`}
         content={`캣린더(Catlendar)는 고양이를 테마로 한 투두 리스트 및 일정 관리 앱으로,
