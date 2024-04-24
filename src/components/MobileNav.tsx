@@ -76,7 +76,6 @@ const Li = styled.li`
     transform: scale(1.3);
   }
 
-  //li 요소가 바로 옆에 붙어있을 때
   & + & {
     margin-top: ${({ theme }) => theme.marginL};
   }
@@ -94,7 +93,11 @@ function MobileNav() {
     { text: "Home", path: "/" },
     { text: "About", path: "#about" },
     { text: "Project", path: "#project" },
-    { text: "Resume", path: "#resume" },
+    {
+      text: "Resume",
+      path: "https://drive.google.com/file/d/1WaqGg6qzTDnMslrwzfw8iR8GZ--_PRUN/view?usp=sharing",
+      isResume: true,
+    },
   ];
 
   useEffect(() => {
@@ -132,9 +135,14 @@ function MobileNav() {
           </Icon>
           <div>
             <ul>
-              {menuDetails.map(({ text, path }) => (
+              {menuDetails.map(({ text, path, isResume }) => (
                 <Li onClick={closeClick}>
-                  <Menu href={path} aria-label={text}>
+                  <Menu
+                    href={path}
+                    aria-label={text}
+                    target={isResume ? "_blank" : undefined}
+                    rel={isResume ? "noreferrer noopener" : undefined}
+                  >
                     {text}
                   </Menu>
                 </Li>
