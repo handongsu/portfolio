@@ -115,13 +115,17 @@ function ProjectComp({
             <SS>배포 링크</SS>
             <br />
             <br />
-            <a href={link}>{link}</a>
+            <a href={link} target="_blank">
+              {link}
+            </a>
             <br />
             <br />
             <SS>레포지토리 주소</SS>
             <br />
             <br />
-            <a href={repo}>{repo}</a>
+            <a href={repo} target="_blank">
+              {repo}
+            </a>
           </div>
         </Link>
       </div>
