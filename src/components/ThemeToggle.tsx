@@ -12,28 +12,6 @@ export interface ToggleSwitchProps extends SwitchProps {
   mode: ThemeModeProps;
 }
 
-// const ToggleSwitch = withStyles({
-//   switchBase: {
-//     color: "#FFF",
-//     "&$checked": {
-//       color: "#a6ff4d",
-//       "& + $track": {
-//         backgroundColor: "gray",
-//         opacity: 0.5,
-//       },
-//     },
-
-//     "&$focusVisible $thumb": {
-//       border: "6px solid #a6ff4d",
-//     },
-//   },
-//   track: {
-//     border: `1px solid black`,
-//     backgroundColor: "white",
-//   },
-//   checked: {},
-// })((props: ToggleSwitchProps) => <Switch {...props} />);
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ToggleSwitch = styled(({ mode, ...rest }: ToggleSwitchProps) => (
   <Switch {...rest} />

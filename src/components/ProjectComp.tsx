@@ -14,7 +14,7 @@ const ProjectBox = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   margin: 0 ${({ theme }) => theme.marginXL};
   font-family: "SejonghospitalLight";
   margin-bottom: ${({ theme }) => theme.marginXXL};
@@ -91,7 +91,7 @@ const DescBox = styled.div`
   }
   @media ${(props) => props.theme.deskTop} {
     width: 500px;
-    padding-top: 0;
+    padding-top: 70px;
   }
 `;
 
@@ -137,6 +137,8 @@ function ProjectComp({
         <h3>기술 스택</h3>
         <br />
         {skills}
+        <br />
+        <h3></h3>
       </DescBox>
     </ProjectBox>
   );

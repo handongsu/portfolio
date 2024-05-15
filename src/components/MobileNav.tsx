@@ -95,7 +95,7 @@ function MobileNav() {
     { text: "Project", path: "#project" },
     {
       text: "Resume",
-      path: "https://drive.google.com/file/d/1WaqGg6qzTDnMslrwzfw8iR8GZ--_PRUN/view?usp=sharing",
+      path: "https://drive.google.com/file/d/12NudPLQK8ZUTWLXnBux0UxDI-TIVK7HR/view?usp=sharing",
       isResume: true,
     },
   ];

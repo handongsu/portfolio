@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import profile from "../assets/IMG_4391.jpeg";
+import * as AiIcons from "react-icons/ai";
+import { SiVelog } from "react-icons/si";
 
 const AboutBox = styled.section`
   min-height: 100vh;
@@ -45,7 +47,7 @@ const Info = styled.div`
 `;
 
 const Intro = styled.p`
-  padding-bottom: ${({ theme }) => theme.paddingL};
+  /* padding-bottom: ${({ theme }) => theme.paddingL}; */
   margin: ${({ theme }) => theme.marginL};
   border-bottom: 1px solid;
   line-height: 2;
@@ -105,6 +107,16 @@ const Skills = styled.div`
   gap: 5px;
   margin-bottom: 5px;
 `;
+
+const IconLink = styled.a`
+  font-size: 30px; // 원하는 크기로 조정
+  color: inherit; // 필요에 따라 색상 조정
+  margin: 0 10px; // 아이콘간 간격 조정
+
+  &:hover {
+    color: #ccc; // 마우스 오버시 색상 변경
+  }
+`;
 function About() {
   return (
     <AboutBox id="about">
@@ -136,6 +148,25 @@ function About() {
               🔥 일상에서 마주한 불편함으로, 더 나은 사용자경험에 대해
               고민합니다.
             </span>
+            <br />
+            <a
+              href="https://github.com/handongsu"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <IconLink>
+                <AiIcons.AiFillGithub />
+              </IconLink>
+            </a>
+            <a
+              href="https://velog.io/@dos1436/posts"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <IconLink>
+                <SiVelog />
+              </IconLink>
+            </a>
           </Intro>
           <Skills>
             <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white" />
@@ -148,7 +179,6 @@ function About() {
             <img src="https://img.shields.io/badge/Styled%20Components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white" />
             <img src="https://img.shields.io/badge/Recoil-3578E5?style=for-the-badge&logo=recoil&logoColor=white" />
             <img src="https://img.shields.io/badge/React%20Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white" />
-            <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
             <img src="https://img.shields.io/badge/Figma-F24E1E5?style=for-the-badge&logo=figma&logoColor=white" />
           </Skills>
         </Info>
