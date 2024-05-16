@@ -28,6 +28,7 @@ function Projects() {
     <ProjectContent id="project">
       <Title>프로젝트</Title>
       <ProjectComp
+        id={1}
         title={"Portfolio"}
         image={"portfolio.gif"}
         link={`https://dongsu-portfolio.netlify.app/`}
@@ -38,17 +39,18 @@ function Projects() {
         ]}
       />
       <ProjectComp
+        id={2}
         title={"Catlendar"}
         image={"catlendarGIF.gif"}
         link={`https://catlendar.netlify.app/`}
         repo={`https://github.com/Catlendar/catlendar-frontend`}
-        content={`캣린더(Catlendar)는 고양이를 테마로 한 투두 리스트 및 일정 관리 앱으로,
-              사용자들에게 운세를 통한 영감과 긍정적인 목표 설정을 돕는 데 중점을 둔 서비스입니다.`}
+        content={`캣린더(Catlendar)는 고양이를 테마로 한 투두 리스트 및 일정 관리 앱으로, 사용자들에게 운세를 통한 영감과 긍정적인 목표 설정을 돕는 데 중점을 둔 서비스입니다.`}
         skills={[
           "React.js, TypeScript, CSS, Recoil, Styled-Component, React-Query, chart.js",
         ]}
       />
       <ProjectComp
+        id={3}
         title={"FitBuddy"}
         image={
           "https://github.com/FRONTENDSCHOOL7/final-21-FitBuddy/assets/139687655/f4a2c6d4-d4f2-4f23-b8c1-224ad7567fe9"

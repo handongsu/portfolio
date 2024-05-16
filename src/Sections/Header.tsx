@@ -1,6 +1,8 @@
 import ThemeToggle from "../components/ThemeToggle";
 import styled from "styled-components";
 import MobileNav from "../components/MobileNav";
+import { useLocation, useNavigate } from "react-router-dom";
+import { IoIosArrowBack } from "react-icons/io";
 
 const HeaderBox = styled.header`
   display: flex;
@@ -32,10 +34,25 @@ const SectionTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontL};
 `;
 
+const Icon = styled.button`
+  font-size: 35px;
+  padding-top: 5px;
+  cursor: pointer;
+`;
+
 function Header() {
+  const location = useLocation().pathname;
+  const navigate = useNavigate();
   return (
     <HeaderBox>
-      <MobileNav />
+      {location !== "/" ? (
+        <Icon onClick={() => navigate(-1)}>
+          <IoIosArrowBack />
+        </Icon>
+      ) : (
+        <MobileNav />
+      )}
+
       <Title>
         <a href="/">DS Portfolio</a>
       </Title>

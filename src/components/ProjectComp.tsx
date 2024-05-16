@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export interface InformationProps {
@@ -7,6 +8,7 @@ export interface InformationProps {
   content: string;
   repo: string;
   skills: string[];
+  id: number;
 }
 
 const ProjectBox = styled.article`
@@ -55,10 +57,10 @@ const Image = styled.div`
 
 const Title = styled.h1`
   font-family: "DNFBitBitv2";
-  /* text-align: center; */
+  font-size: 22px;
 `;
 
-const Link = styled.div`
+const ALink = styled.div`
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -77,6 +79,7 @@ const SS = styled.span`
 const DescBox = styled.div`
   line-height: 2;
   padding: ${(props) => props.theme.paddingM};
+  white-space: pre-wrap;
 
   h3 {
     font-family: "DNFBitBitv2";
@@ -109,8 +112,10 @@ function ProjectComp({
         <Image>
           <img src={`${image}`} alt={title} />
         </Image>
-        <Link>
-          <Title>{title}</Title>
+        <ALink>
+          <Link to={`/${title}`}>
+            <Title>{title}</Title>
+          </Link>
           <div>
             <SS>배포 링크</SS>
             <br />
@@ -127,7 +132,7 @@ function ProjectComp({
               {repo}
             </a>
           </div>
-        </Link>
+        </ALink>
       </div>
       <DescBox>
         <h3>프로젝트 소개</h3>
@@ -138,7 +143,6 @@ function ProjectComp({
         <br />
         {skills}
         <br />
-        <h3></h3>
       </DescBox>
     </ProjectBox>
   );
